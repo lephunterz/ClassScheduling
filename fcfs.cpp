@@ -1,9 +1,18 @@
 /* Simple C++ program for implementation 
 of FCFS scheduling */
 
+
+//MUHAMMAD ZULHILMIE BIN MOHAMAD ROSDI 	1812277
+//MUHAMMAD SHAFIQ BIN SHAMSURI			1811069
+//MUHAMMAD ALIF NAJMI BIN MOHD AZMAN	1915601
+
+
 #include<iostream>
 
 using namespace std;
+
+
+
  
 // function to find the waiting time for all processes
 void findWaitingTime(int processes[], int n, int bt[], int wt[])
@@ -14,7 +23,7 @@ void findWaitingTime(int processes[], int n, int bt[], int wt[])
     // calculating waiting time
     for (int i = 1; i < n ; i++)
     {
-        wt[i] =  bt[i-1] + wt[i-1];
+        wt[i] =  processes[i-1] + wt[i-1];
     }
 }
  
@@ -25,7 +34,7 @@ void findTurnAroundTime( int processes[], int n, int bt[], int wt[], int tat[])
     // bt[i] + wt[i]
     for (int i = 0; i < n ; i++)
     {
-        tat[i] = bt[i] + wt[i];
+        tat[i] = processes[i] + wt[i];
     }
 }
  
@@ -41,7 +50,7 @@ void findAverageTime( int processes[], int n, int bt[])
     findTurnAroundTime(processes, n, bt, wt, tat);
  
     // display processes along with all details
-    cout << "Processes  "<< " Burst time  "<< " Waiting time  " << " Turn around time\n";
+    cout << "course  "<< " Arrival  "<< " Duration  " << " Turn around time\n";
  
     // calculate total waiting time and total turn around time
     for (int i = 0; i < n; i++)
@@ -69,3 +78,4 @@ int main()
     
     return 0;
 }
+
