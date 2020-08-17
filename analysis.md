@@ -18,13 +18,13 @@
 
 ## FCFS
 
-Give an analysis of your algo and compare it with the other two
+First Come First Served (FCFS) executes the processes in the order in which they arrive i.e. the process that arrives first is executed first. In FCFS, a process may lead to lower device and CPU utilization thereby decreasing the efficiency of the system but ave to wait for quite long to get executed depending on the burst time of the processes that have arrived first.
 
 ## Priority
 
-Give an analysis of your algo and compare it with the other two
+In Priority scheduling, processes are executed on the basis of priority so high priority does not need to wait for long which saves time and easy to be use. This method provides a good mechanism where the relative important of each process may be precisely defined.
 
 ## SJF
+Shortest Job First (SJF) executes the processes based upon their burst time i.e. in ascending order of their burst times. SJF is also non-preemptive but its preemptive version is also there called Shortest Remaining Time First (SRTF) algorithm. The average waiting time for given set of processes is minimum and it does not lead to the convoy effect. SJF leads to higher effectiveness of the system due to lower average waiting time rather than FCFS and Priority.
 
-Give an analysis of your algo and compare it with the other two
 
